@@ -27,6 +27,7 @@ public class PlayerStats : MonoBehaviour {
 
 	void Update() {
         healthBar.fillAmount = (float)health / startHealth;
+		// Debug.Log(healthBar.fillAmount);
         workaround = health;
     }
 

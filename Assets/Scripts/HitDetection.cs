@@ -14,6 +14,8 @@ public class HitDetection : MonoBehaviour
 
    private void OnTriggerEnter(Collider other) {
        string tag = other.tag;
+       
+       Debug.Log("Trigger enter");
 
        if(tag.Equals("Wall")){
            //Nothing
@@ -21,10 +23,14 @@ public class HitDetection : MonoBehaviour
        }else if(tag.Equals("Enemy")){
            Debug.Log("Troops disembark, big health drop");
            PlayerStats.health -= 3;
+           Debug.Log(PlayerStats.health);
+           other.gameObject.GetComponent<BoxCollider>().enabled = false;
            Destroy(other.gameObject, 2f);
+           Debug.Log(PlayerStats.health);
        }else if (tag.Equals("Projectile"))
        {
-           Debug.Log("Projectile impact");
+        //    Debug.Log("Projectile impact");
+        //    Debug.Log("Health" + PlayerStats.health);
            PlayerStats.health--;
        }
    }

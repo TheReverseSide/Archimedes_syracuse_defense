@@ -12,8 +12,8 @@ public class WaveMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		pos = transform.position;
-		frequency = Random.Range (1.9f, 2.1f);
-		magnitude = Random.Range (0.07f, 0.1f);
+		frequency = Random.Range (1.9f, 2.6f);
+		magnitude = Random.Range (0.07f, 0.18f);
 	}
 	
 	// Update is called once per frame

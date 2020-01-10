@@ -52,7 +52,7 @@ public class Bullet : MonoBehaviour
         }
         else
         {
-            Debug.Log("Bullet hit: " + target.gameObject);
+            Debug.Log("Target hit: " + target.gameObject);
             Damage(target);
         }
 
@@ -77,6 +77,7 @@ public class Bullet : MonoBehaviour
 
         if (e != null)
         {
+            Debug.Log("Should damage");
             e.TakeDamage(damage);
         }
     }

@@ -74,7 +74,6 @@ public class Ship : MonoBehaviour {
         else
         {
             //Drive to target and crash into wall
-            // Debug.Log("Drive to target and crash into wall");
         }
     }
 
